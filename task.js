@@ -7,13 +7,13 @@ let tasks = ["read a book", "vacuum cleaner", "dish washing", "maybe some back-e
 //acceuil
 
 const menu = () => {
-    console.log(`Welcome to your Task Manager, press:`);
-    console.log(`1.to see all your task`);
-    console.log(`2.to add a task`);
-    console.log(`3. to delete a task`); 
-    console.log(`4.to mark a task as done`);
-    console.log(`5.to exit task manager`);
-}
+        console.log(`Welcome to your Task Manager, press:\n` +
+       `1.to see all your task\n` +
+       `2.to add a task\n` +
+       `3. to delete a task\n` + 
+       `4.to mark a task as done\n` +
+       `5.to exit task manager`);
+    }
 
 //liste de tasks
 const showtasks = () => {
@@ -56,6 +56,7 @@ const taskManager = () => {
         showtasks();
         return taskManager();
     } else if (choice === "2"){
+        console.log(tasks)
         addTask();
         return taskManager();
     } else if (choice === "3"){
